@@ -2,9 +2,6 @@ import  selenium
 import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-# from drivers.driver_setup import create_driver
-
-
 
 
 def terms_of_use(driver):
