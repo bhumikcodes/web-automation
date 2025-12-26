@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-12-25T19:22:22.090009" rpa="false" schemaversion="5">
+<suite id="s1" name="Main" source="C:\bhumikcodes\main.robot">
+<test id="s1-t1" name="Open Chrome" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-25T19:22:22.665141" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
+<arg>https://www.flipkart.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-25T19:22:22.653539" elapsed="7.192865"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-25T19:22:29.847049" elapsed="0.370295"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=Passed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-25T19:22:30.217711" elapsed="0.000726"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-25T19:22:30.218773" elapsed="2.258474"/>
+</kw>
+<status status="PASS" start="2025-12-25T19:22:22.651884" elapsed="9.825800"/>
+</test>
+<status status="PASS" start="2025-12-25T19:22:22.092827" elapsed="10.386003"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Main" id="s1" pass="1" fail="0" skip="0">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,3 +1,4 @@
+from collections import Counter
 #Array
 
 a = [2,3,1,4,5]
@@ -22,15 +23,19 @@ else:
 a.append(7)
 print(a)
 
+print(b.count(5))
+
+
+
+# print(a.extend(b))
+
 b.insert(1,5)
 print(b)
 
-print(b.count(5))
-
-b.remove(2)
+b.pop(1)
 print(b)
 
-b.pop(1)
+b.remove(2)
 print(b)
 
 b.clear()
@@ -63,6 +68,8 @@ print(str3)
 
 
 print(str1[::-1])
+
+print(str2+"bc")
 #Reverse a string
 s = "GeeksforGeeks"
 
@@ -88,6 +95,9 @@ for count in s:
         e.append(count)
 print(e)
 
+f=dict(Counter(s))
+print(str(f))
+
 s = "racecar"
 c = len(s)
 for i in range(c):
@@ -100,5 +110,76 @@ for i in range(c):
     if not b:
         print(s[i])
 
+for ch in s:
+    if s.count(ch)==1:
+        print(ch)
 
 
+#Dictionary
+    
+input = ["apple","mango","apple","sapoto","mango"]
+# output = ["apple":2 , "mango":2, "sapoto":1]
+
+
+a= dict(Counter(input))
+print(a)
+
+b={}
+for ch in input:
+    if ch in b:
+        b[ch] += 1
+    else:
+        b[ch] = 1
+print(b)
+
+a= "hello"
+
+print(''.join(reversed(a)))
+
+data = {'name': 'Alice', 'age': 30, 'city': 'New York'}
+
+print(data.get("name"))
+
+a=data.keys()
+print(list(a))
+b=data.values()
+print(list(b))
+
+data.update({"name":"Bhumik", "age":28, "IT":44})
+print(data)
+
+print(data.pop("IT"))
+print(data)
+
+
+
+string = "ab c d"
+input = len(string)
+output=""
+for i in range(input):
+    if string[i]==" ":
+        continue
+    output = output+string[i]
+print(output)
+
+
+input = "aabbbbcccd"
+output = "b4c3a2d1"
+# a=dict(Counter(input))
+# print(list([a]))
+unique=""
+result=""
+for ch in input:
+    if ch not in unique:
+        unique+=ch
+pairs=[]
+for ch in unique:
+    pairs.append([ch,input.count(ch)])
+print(pairs)
+for i in range(len(pairs)):
+    for j in range(i+1,len(pairs)):
+        if pairs[i][1]<pairs[j][1]:
+            pairs[i], pairs[j]=pairs[j], pairs[i]
+for ch, cnt in pairs:
+    result=result+ch+str(cnt)
+print(b)
