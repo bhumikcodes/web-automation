@@ -1,11 +1,11 @@
 import pytest
 import sys
 import os
-from tests.test_login import *
+from tests.test_website import *
 
 
 if __name__=="__main__":
-    test_login1()
+    test_website()
 
 # # Ensure project root is in sys.path
 # project_root = os.path.dirname(os.path.abspath(__file__))

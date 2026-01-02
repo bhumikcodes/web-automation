@@ -5,16 +5,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from utils.testData import test_data
-from pages.common_func import privacy_policy, terms_of_use
+
 
 class LoginPage:
 
-    def __init__(self, driver):
-        self.driver = driver
+    # def __init__(self, driver):
+    #     self.driver = driver
 
 
-    def login_scenario(self):
-        driver=self.driver
+    def login_scenario(driver):
+        # driver=self.driver
         try:
             driver.find_element(By.XPATH, "//span[text()='Login']").click()
             wait = WebDriverWait(driver, 10, poll_frequency=1)
@@ -34,12 +34,7 @@ class LoginPage:
                     print("There you go")
                 input.clear()
                 time.sleep(2)
-            privacy_policy(driver)
-            terms_of_use(driver)
-            # object.terms_of_use()
-            # object.privacy_policy()
         except Exception as e:
             print(e)
-        driver.close()
 
 

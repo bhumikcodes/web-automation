@@ -1,40 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-12-07T19:09:28.889221" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-12-30T19:28:02.040323" rpa="false" schemaversion="5">
 <suite id="s1" name="Bhumikcodes" source="C:\bhumikcodes">
 <suite id="s1-s1" name="Main" source="C:\bhumikcodes\main.robot">
-<test id="s1-s1-t1" name="Open Chrome" line="5">
+<test id="s1-s1-t1" name="Open Chrome" line="7">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-07T19:09:29.438556" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
+<msg time="2025-12-30T19:28:02.747300" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
 <arg>https://www.flipkart.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-07T19:09:29.437967" elapsed="6.062250"/>
+<status status="PASS" start="2025-12-30T19:28:02.746672" elapsed="8.463348"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-07T19:09:35.501941" elapsed="0.404246"/>
+<status status="PASS" start="2025-12-30T19:28:11.260297" elapsed="0.835978"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-07T19:09:35.907279" elapsed="2.298720"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=Test Passed!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-30T19:28:12.151132" elapsed="0.017160"/>
 </kw>
-<status status="PASS" start="2025-12-07T19:09:29.430800" elapsed="8.777170"/>
+<kw name="Terms Of Use">
+<msg time="2025-12-30T19:28:12.188804" level="FAIL">No keyword with name 'Terms Of Use' found.</msg>
+<status status="FAIL" start="2025-12-30T19:28:12.179478" elapsed="0.026122">No keyword with name 'Terms Of Use' found.</status>
+</kw>
+<status status="FAIL" start="2025-12-30T19:28:02.738641" elapsed="9.488465">No keyword with name 'Terms Of Use' found.</status>
 </test>
-<status status="PASS" start="2025-12-07T19:09:29.022301" elapsed="9.210191"/>
+<status status="FAIL" start="2025-12-30T19:28:02.183671" elapsed="10.230825"/>
 </suite>
-<status status="PASS" start="2025-12-07T19:09:28.900498" elapsed="9.343938"/>
+<status status="FAIL" start="2025-12-30T19:28:02.064147" elapsed="10.613576"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Bhumikcodes" id="s1" pass="1" fail="0" skip="0">Bhumikcodes</stat>
-<stat name="Main" id="s1-s1" pass="1" fail="0" skip="0">Bhumikcodes.Main</stat>
+<stat name="Bhumikcodes" id="s1" pass="0" fail="1" skip="0">Bhumikcodes</stat>
+<stat name="Main" id="s1-s1" pass="0" fail="1" skip="0">Bhumikcodes.Main</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-12-30T19:28:02.695724" level="ERROR">Error in file 'C:\bhumikcodes\main.robot' on line 3: Importing library 'C:\bhumikcodes\pages\common_func.py' failed: ModuleNotFoundError: No module named 'drivers'
+Traceback (most recent call last):
+  File "C:\bhumikcodes\pages\common_func.py", line 5, in &lt;module&gt;
+    from drivers.driver_setup import create_driver
+PYTHONPATH:
+  C:\bhumikcodes\pages
+  C:\bhumikcodes\lib
+  C:\bhumikcodes\resources
+  c:\Users\ADMIN\.vscode\extensions\d-biehl.robotcode-2.1.0\bundled\libs
+  c:\Users\ADMIN\.vscode\extensions\d-biehl.robotcode-2.1.0\bundled\tool\robotcode
+  C:\Users\ADMIN\AppData\Local\Programs\Python\Python314\python314.zip
+  C:\Users\ADMIN\AppData\Local\Programs\Python\Python314\DLLs
+  C:\Users\ADMIN\AppData\Local\Programs\Python\Python314\Lib
+  C:\Users\ADMIN\AppData\Local\Programs\Python\Python314
+  C:\Users\ADMIN\AppData\Local\Programs\Python\Python314\Lib\site-packages</msg>
 </errors>
 </robot>

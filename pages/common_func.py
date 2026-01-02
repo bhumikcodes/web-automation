@@ -2,6 +2,8 @@ import  selenium
 import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def terms_of_use(driver):
@@ -28,3 +30,11 @@ def privacy_policy(driver):
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
         return
+
+def click(driver,element):
+    driver.find_element(By.XPATH,element).click()
+    return
+
+def wait(driver,element):
+    WebDriverWait(driver, 10, poll_frequency=1).until(EC.element_to_be_clickable((By.XPATH,element)))
+
