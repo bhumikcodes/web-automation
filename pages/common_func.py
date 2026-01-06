@@ -20,7 +20,6 @@ def terms_of_use(driver):
 
 
 def privacy_policy(driver):
-    # driver= create_driver()
     driver.find_element(By.LINK_TEXT,"Privacy Policy").click()
     driver.switch_to.window(driver.window_handles[1])
     time.sleep(2)
@@ -36,5 +35,5 @@ def click(driver,element):
     return
 
 def wait(driver,element):
-    WebDriverWait(driver, 10, poll_frequency=1).until(EC.element_to_be_clickable((By.XPATH,element)))
+    WebDriverWait(driver, 10, poll_frequency=3).until(EC.presence_of_element_located((By.XPATH,element)))
 
