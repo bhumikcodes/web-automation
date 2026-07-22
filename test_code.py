@@ -3,7 +3,7 @@ from collections import Counter
 
 a = [2,3,1,4,5]
 b = [1,2,3,5,4]
-c = ['This', 'is', 'an', 'array']
+c = ['This', 'is', 'a', 'list']
 int1 = 567
 str1 = "Bhumik"
 str2 = "My test code"
@@ -41,11 +41,11 @@ print(b)
 b.clear()
 print(b)
 
-#String to array
+#String to List
 print(list(str2))
-print(str2.split())
+print(str2.split("/"))
 
-#Array to string
+#List to string
 d=''.join(c)
 print(d)
 print(list(d))
@@ -182,4 +182,15 @@ for i in range(len(pairs)):
             pairs[i], pairs[j]=pairs[j], pairs[i]
 for ch, cnt in pairs:
     result=result+ch+str(cnt)
-print(b)
+print(result)
+
+
+
+str = "ab c d"
+output = ""
+for i in range(len(str)):
+    if str[i] == " ":
+        continue
+    else:
+        output+=str[i]
+print(output)
