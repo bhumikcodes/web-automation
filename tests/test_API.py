@@ -6,4 +6,6 @@ assert request.status_code==200
 print(request.status_code)
 print(request.text)
 
+print("ok")
+
 
